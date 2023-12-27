@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: PONG
         env:
-          MESSAGE: ${{ github.event.client_payload.repository}}
+          MESSAGE: ${{ github.event.client_payload.repository }}
         run: echo $MESSAGE
