@@ -1,0 +1,14 @@
+name: Action Responder
+
+on:
+  repository_dispatch:
+    types: [ping]
+
+jobs:
+  action_responder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PONG
+        env:
+          MESSAGE: ${{ github.event.client_payload.repository}}
+        run: echo $MESSAGE
