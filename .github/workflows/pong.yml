@@ -10,5 +10,6 @@ jobs:
     steps:
       - name: PONG
         env:
-          MESSAGE: ${{ github.event.client_payload.repository }}
-        run: echo $MESSAGE
+          Repository: ${{ github.event.client_payload.repository }}
+          Branch: ${{ github.event.client_payload.branch }}
+        run: echo "Repository $Repository Branch $Branch"
