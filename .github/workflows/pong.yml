@@ -19,6 +19,6 @@ jobs:
         with:
           ref: ${{ env.Branch }}
       - name: Echo Checked-out Branch
-        run: echo "Checkout branch ${{ github.head_ref }}
+        run: echo "Checkout branch ${{ github.head_ref }}"
             
           
