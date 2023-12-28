@@ -6,7 +6,7 @@ on:
 
 jobs:
   action_responder:
-    if: ${{ startsWith(env.Branch, 'rubricTranslation/') }}
+    if: ${{ startsWith( github.event.client_payload.branch, 'rubricTranslation/' ) }}
     runs-on: ubuntu-latest
     env:
       Repository: ${{ github.event.client_payload.repository }}
