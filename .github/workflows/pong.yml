@@ -19,6 +19,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ env.Branch }}
+      - name: Update Camtasia-Windows-Resources Hash
+        run: |
+          cd One
+          git checkout origin/main
+          cd ..
+          git commit -am"Update Camtasia-Windows-Resouces for Rubric Translation"
+          git push
       - name: Echo Checked-out Branch
         run: echo "Checkout branch ${{ github.head_ref }}"
             
