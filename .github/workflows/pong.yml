@@ -6,11 +6,11 @@ on:
 
 jobs:
   action_responder:
-    if: ${{ startsWith(github.event.client_payload.branch, 'rubricTranslation/') }}
-    runs-on: ubuntu-latest
     env:
       Repository: ${{ github.event.client_payload.repository }}
       Branch: ${{ github.event.client_payload.branch }}
+    if: ${{ startsWith(env.Branch, 'rubricTranslation/') }}
+    runs-on: ubuntu-latest
     steps:
       - name: Echo Initiator Reop and Branch
         run: echo "Repository $Repository Branch $Branch"
