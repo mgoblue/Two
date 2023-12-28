@@ -1,4 +1,4 @@
-name: Action Responder
+name: Open Rubric CamtasiaWin PR Dispatcher Action Responder
 
 on:
   repository_dispatch:
