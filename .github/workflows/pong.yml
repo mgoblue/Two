@@ -12,12 +12,13 @@ jobs:
       Repository: ${{ github.event.client_payload.repository }}
       Branch: ${{ github.event.client_payload.branch }}
     steps:
-      - name: PONG
+      - name: Echo Initiator Reop and Branch
         run: echo "Repository $Repository Branch $Branch"
       - name: Checkout Rubric Branch
         uses: actions/checkout@v4
         with:
           ref: Branch
-          run: echo "Checkout branch ${{github.head_ref}}
+      - name: Echo Checked-out Branch
+        run: echo "Checkout branch ${{github.head_ref}}
             
           
