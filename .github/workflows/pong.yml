@@ -17,8 +17,10 @@ jobs:
       - name: Checkout Rubric Branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ env.Branch }}
+          ref: '$Branch'
       - name: Echo Checked-out Branch
-        run: echo "Checkout branch ${{ github.head_ref }}"
+        env:
+          Head: ${{ github.head_ref }}
+        run: echo "Checkout branch $Head"
             
           
