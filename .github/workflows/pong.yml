@@ -8,9 +8,9 @@ jobs:
   action_responder:
     if: ${{ startsWith(github.event.client_payload.branch, 'rubricTranslation/') }}
     runs-on: ubuntu-latest
+    env:
+      Repository: ${{ github.event.client_payload.repository }}
+      Branch: ${{ github.event.client_payload.branch }}
     steps:
       - name: PONG
-        env:
-          Repository: ${{ github.event.client_payload.repository }}
-          Branch: ${{ github.event.client_payload.branch }}
         run: echo "Repository $Repository Branch $Branch"
