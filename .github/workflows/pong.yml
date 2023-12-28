@@ -14,3 +14,10 @@ jobs:
     steps:
       - name: PONG
         run: echo "Repository $Repository Branch $Branch"
+      - name: Checkout Rubric Branch
+        uses: actions/checkout@v4
+        with:
+          ref: Branch
+          run: echo "Checkout branch ${{github.head_ref}}
+            
+          
